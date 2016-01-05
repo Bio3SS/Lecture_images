@@ -23,7 +23,8 @@ all.html: $(htmls)
 	$(cat)
 
 # HOOK
-dandelions.html: dandelions.step html.pl
+
+countries.html: countries.step html.pl
 
 ## Content
 
