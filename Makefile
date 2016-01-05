@@ -17,6 +17,7 @@ include $(ms)/perl.def
 ##################################################################
 
 steps = $(wildcard *.step)
+Sources += $(steps)
 htmls =  $(steps:.step=.html)
 
 all.html: $(htmls)
