@@ -13,8 +13,11 @@ Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
 
 include stuff.mk
 include $(ms)/perl.def
+include $(ms)/os.mk
 
 ##################################################################
+
+Sources += images.mk
 
 steps = $(wildcard *.step)
 Sources += $(steps)
