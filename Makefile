@@ -42,6 +42,9 @@ Sources += $(wildcard *.pl)
 	$(MAKE) -f $< -f images.mk thumbs
 	$(PUSHSTAR)
 
+files/linked.crop.jpg: files/linked.jpg Makefile
+	convert -crop 900x550+60+420 $< $@
+
 ######################################################################
 
 ### Makestuff
