@@ -29,7 +29,7 @@ all.html: $(htmls)
 # HOOK
 
 countries.html: countries.step html.pl
-exploitation.html: exploitation.step html.pl
+exploitation.html: exploitation.step 
 
 ## Content
 
