@@ -12,6 +12,7 @@ while (<>){
 	next unless my ($image) = /^([^\s]*):$/;
 	my $thumb = $image;
 	$thumb =~ s/jpg$/png/;
+	$thumb =~ s/gif$/png/;
 	$thumb =~ s/png$/thumb.png/;
 	$curr =~ s/IMG/$image/g;
 	$curr =~ s/THUMB/$thumb/;

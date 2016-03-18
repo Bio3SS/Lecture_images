@@ -6,6 +6,7 @@ export ms = $(gitroot)/makestuff
 -include local.mk
 -include $(gitroot)/local.mk
 export ms = $(gitroot)/makestuff
+-include $(ms)/os.mk
 
 filedir = $(Drop)/Lecture_images
 

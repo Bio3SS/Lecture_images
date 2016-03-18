@@ -1,0 +1,38 @@
+Records of things that we didn't get by rule
+
+################ PLoS Figures
+### Hard to copy (hang) and don't have the right extensions
+circumcision_contours.png http://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0028608.g002
+
+circumcision_nullts http://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0028608.g003
+
+circumcision_ts http://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0028608.g004
+
+###### Wiki figures
+### Need to get this stuff onto github
+endemic.Rout.pdf http://lalashan.mcmaster.ca/theobio/math/index.php/Special:GetProjectFile?project=Endemic_curves_with_heterogeneity&display=download&filename=propCurves.Rout.pdf
+
+pre_diag.pdf post_diag.pdf Just completely lost!
+
+tbincome.pdf: http://lalashan.mcmaster.ca/theobio/math/index.php/TB_and_income
+
+### This figure is made in ~/git/HIV_Project, but from data on the wiki!
+isolate_panel_plot.Rout.pdf
+
+### This set of figures from http://lalashan.mcmaster.ca/theobio/circumcision/index.php/Kenya_women_IPV/predictions
+kw5.iso_plot.Rout.pdf
+kw5.combAnchor_pic.Rout.pdf was _rescued_ from the wiki (remake fails, but we still have it)
+
+### Discordant wiki
+ageTalk6.Rout.pdf http://lalashan.mcmaster.ca/theobio/discord/index.php/Special:GetProjectFile?project=Social_Patterns&make=false&filename=ageTalk6.Rout.pdf
+
+
+##### Contributed
+
+Bellan:  ZambiaCouples.pdf  ObservedRoutes.pdf  IndexRoutes.pdf  Projections.pdf 
+
+
+######## Downloaded gifs sometimes need to be converted
+### This actually is made by rule, but there's no way for it to get called yet except manually
+files/granich_boxes.png
+

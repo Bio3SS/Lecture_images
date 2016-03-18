@@ -10,22 +10,28 @@ while (<>){
 	next if /^\s*$/;
 	next if /^#/;
 
-	my ($name, $url) = split /\s+/;
-	$name = "files/$name";
-	my $ext = $url;
+	my ($fn, $url) = split /\s+/;
+	$fn = "files/$fn";
+
+	my $ext="";
+	$ext = $url if $url;
 	$ext =~ s/.*\.//;
 	$ext =~ tr/[A-Z]/[a-z]/;
 
-	my $fn = "$name.$ext";
+	$fn = "$fn.$ext" if $ext;
+	(my $name, $ext) = $fn =~ /(.*)\.(.*)/;
 	push @images, $fn;
 	push @thumbs, "$name.thumb.png";
 
 	my $rline = $recipe;
-	$url =~ s|^|http://| unless $url =~/^http/;
-	$rline =~ s/URL/$url/;
 
 	say "$fn:";
-	say "\t$rline";
+
+	if ($url){
+		$url =~ s|^|http://| unless $url =~/^http/;
+		$rline =~ s/URL/$url/;
+		say "\t$rline";
+	}
 }
 
 say "images = " . join " ", @images;
