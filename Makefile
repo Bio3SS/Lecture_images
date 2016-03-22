@@ -65,7 +65,7 @@ current.html: hiv.html journals.html import.html philosophy.html het.html models
 
 ######################################################################
 
-## Importing lecture make files We don't need to keep .imk files after they are converted
+## Importing lecture make files We don't need to keep .imk files after they are converted; also don't keep .imk explicit (hook) rules; they will confuse make.
 
 %.step: %.imk imk.pl
 	$(PUSH)
