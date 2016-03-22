@@ -67,7 +67,6 @@ current.html: hiv.html journals.html import.html philosophy.html het.html models
 
 ## Importing lecture make files We don't need to keep .imk files after they are converted
 
-het.step: het.imk imk.pl
 %.step: %.imk imk.pl
 	$(PUSH)
 
