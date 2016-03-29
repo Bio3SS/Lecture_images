@@ -2,8 +2,8 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: current.html 
-target pngtarget pdftarget vtarget acrtarget: current.html 
+target pngtarget pdftarget vtarget acrtarget: diseases.html 
+target pngtarget pdftarget vtarget acrtarget: diseases.html 
 
 ##################################################################
 
@@ -26,6 +26,7 @@ countries.html: countries.step html.pl
 competition.html: competition.step
 countries.html: countries.step
 dandelions.html: dandelions.step
+diseases.html: diseases.step
 ebola.html: ebola.step
 hiv.html: hiv.step
 humans.html: humans.step
