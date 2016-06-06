@@ -56,6 +56,10 @@ Sources += copies.txt
 
 ######################################################################
 
+## Pictures from me
+
+Sources += elegant.jpg
+
 ## Digest files
 htmls =  $(steps:.step=.html)
 
