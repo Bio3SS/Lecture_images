@@ -3,7 +3,6 @@
 current: target
 
 target pngtarget pdftarget vtarget acrtarget: aging.html 
-target pngtarget pdftarget vtarget acrtarget: aging.html 
 
 ##################################################################
 
@@ -23,6 +22,7 @@ Sources += images.mk
 # Step files and machinery
 
 countries.html: countries.step html.pl
+dynamics.html: dynamics.step
 competition.html: competition.step
 countries.html: countries.step
 dandelions.html: dandelions.step
