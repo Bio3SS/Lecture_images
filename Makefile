@@ -2,8 +2,8 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: diseases.html 
-target pngtarget pdftarget vtarget acrtarget: diseases.html 
+target pngtarget pdftarget vtarget acrtarget: aging.html 
+target pngtarget pdftarget vtarget acrtarget: aging.html 
 
 ##################################################################
 
@@ -39,6 +39,7 @@ nonlinear.html: nonlinear.step
 populations.html: populations.step
 structure.html: structure.step
 units.html: units.step
+aging.html: aging.step
 
 steps = $(wildcard *.step)
 Sources += $(steps)
