@@ -5,7 +5,7 @@ my $rec = '<p><a href = "IMG">IMG:</a></p> <img src=THUMB></li><hr>';
 
 my $name = shift(@ARGV);
 
-say "<h2>$name</h2>";
+say "<h1 style=\"color:red;\">$name</h1>";
 while (<>){
 	chomp;
 	my $curr = $rec;
