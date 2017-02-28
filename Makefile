@@ -61,6 +61,8 @@ dynamics.html: dynamics.step
 
 ## Selected for particular talks
 aging.html: aging.step
+evaluation.html: evaluation.step
+rabies.html: rabies.step
 
 steps = $(wildcard *.step)
 Sources += $(steps)
