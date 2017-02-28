@@ -9,7 +9,7 @@ target pngtarget pdftarget vtarget acrtarget: rabies.html
 # make files
 ## and so on
 
-Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
+Sources = Makefile .gitignore README.md stuff.mk LICENSE.md todo.md
 
 include stuff.mk
 include $(ms)/perl.def
@@ -19,26 +19,48 @@ Sources += images.mk
 
 ##################################################################
 
-# Step files and machinery
+# Step files
 
-countries.html: countries.step html.pl
-dynamics.html: dynamics.step
-competition.html: competition.step
+########## General
+## Images that represent different countries
 countries.html: countries.step
-dandelions.html: dandelions.step
+
+####### Disease spread
+## Disease organisms
 diseases.html: diseases.step
-ebola.html: ebola.step
+
+ebola.html: ebola.step html.pl
 hiv.html: hiv.step
+flu.html: flu.step
+
+health.html: health.step
+
+## Human heterogeneity
 humans.html: humans.step
+
+###### What the hell is this category? Maybe stuff that was here before I started organizing?
 import.html: import.step
+
+
+## Career stuff (I guess)
 journals.html: journals.step
+
+##### Selected for 3SS units
+competition.html: competition.step
+dandelions.html: dandelions.step
 life_history.html: life_history.step
 logs.html: logs.step
-models.html: models.step
 nonlinear.html: nonlinear.step
 populations.html: populations.step
 structure.html: structure.step
 units.html: units.step
+
+######## Selected for ICI3D
+models.html: models.step
+## Boxcars
+dynamics.html: dynamics.step
+
+## Selected for particular talks
 aging.html: aging.step
 evaluation.html: evaluation.step
 rabies.html: rabies.step
@@ -68,7 +90,7 @@ htmls =  $(steps:.step=.html)
 all.html: $(htmls)
 	$(cat)
 
-current.html: hiv.html journals.html import.html philosophy.html het.html models.html
+current.html: hiv.html ebola.html models.html import.html
 	$(cat)
 
 ######################################################################
