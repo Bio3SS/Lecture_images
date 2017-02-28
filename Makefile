@@ -13,7 +13,6 @@ Sources = Makefile .gitignore README.md stuff.mk LICENSE.md todo.md
 
 include stuff.mk
 include $(ms)/perl.def
-include $(ms)/os.mk
 
 Sources += images.mk
 
