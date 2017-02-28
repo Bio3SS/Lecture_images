@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: aging.html 
+target pngtarget pdftarget vtarget acrtarget: rabies.html 
 
 ##################################################################
 
@@ -40,6 +40,8 @@ populations.html: populations.step
 structure.html: structure.step
 units.html: units.step
 aging.html: aging.step
+evaluation.html: evaluation.step
+rabies.html: rabies.step
 
 steps = $(wildcard *.step)
 Sources += $(steps)
