@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: logs.html 
+target pngtarget pdftarget vtarget acrtarget: life_history.html 
 
 ##################################################################
 
@@ -40,7 +40,6 @@ humans.html: humans.step
 
 ###### What the hell is this category? Maybe stuff that was here before I started organizing?
 import.html: import.step
-
 
 ## Career stuff (I guess)
 journals.html: journals.step
