@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: competition.html 
+target pngtarget pdftarget vtarget acrtarget: countries.html 
 
 ##################################################################
 
@@ -10,6 +10,7 @@ target pngtarget pdftarget vtarget acrtarget: competition.html
 ## and so on
 
 Sources = Makefile .gitignore README.md stuff.mk LICENSE.md todo.md
+Makefile: allsteps.mk
 
 include stuff.mk
 include $(ms)/perl.def
@@ -63,10 +64,16 @@ aging.html: aging.step
 evaluation.html: evaluation.step
 rabies.html: rabies.step
 
+########################################################################
+
+### Rules for getting stuff
+
+## Here is a list of files that are in the first Dropbox version (under courses) but got there by other means
+Sources += copies.txt
+
 steps = $(wildcard *.step)
 Sources += $(steps)
 Sources += $(wildcard *.pl)
-Sources += copies.txt
 
 %.step.mk: %.step mk.pl
 	$(PUSH)
@@ -79,6 +86,7 @@ Sources += copies.txt
 ######################################################################
 
 ## Pictures from me
+## Supposed to be somewhere else (my_images, I guess)
 
 Sources += elegant.jpg
 
@@ -93,12 +101,6 @@ current.html: hiv.html ebola.html models.html import.html
 
 ######################################################################
 
-## Importing lecture make files We don't need to keep .imk files after they are converted; also don't keep .imk explicit (hook) rules; they will confuse make.
-
-%.step: %.imk imk.pl
-	$(PUSH)
-
-######################################################################
 
 # Special image rules
 

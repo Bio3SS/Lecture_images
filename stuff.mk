@@ -1,6 +1,6 @@
 msrepo = https://github.com/dushoff
 gitroot = ../
-Drop = ~/Dropbox/courses
+Drop = ~/Dropbox/
 export ms = $(gitroot)/makestuff
 
 -include local.mk
@@ -8,7 +8,7 @@ export ms = $(gitroot)/makestuff
 export ms = $(gitroot)/makestuff
 -include $(ms)/os.mk
 
-filedir = $(Drop)/Lecture_images
+filedir = $(Drop)/Lecture_image_files
 
 Makefile: files
 
