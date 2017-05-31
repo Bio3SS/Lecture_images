@@ -1,19 +1,19 @@
 # Lecture_images
-### Hooks for the editor to set the default target
-current: target
 
-target pngtarget pdftarget vtarget acrtarget: countries.html 
+current: target
+target = Makefile
+-include target.mk
+target: $(target)
 
 ##################################################################
 
 # make files
 ## and so on
 
-Sources = Makefile .gitignore README.md stuff.mk LICENSE.md todo.md
-Makefile: allsteps.mk
+Sources = Makefile .gitignore README.md sub.mk LICENSE.md todo.md
 
-include stuff.mk
-include $(ms)/perl.def
+include sub.mk
+-include $(ms)/perl.def
 
 Sources += images.mk
 
@@ -83,6 +83,10 @@ Sources += $(wildcard *.pl)
 	$(MAKE) -f $< -f images.mk thumbs
 	$(PUSHSTAR)
 
+stepmks = $(steps:.step=.step.mk)
+allsteps.mk: $(stepmks)
+	$(cat)
+
 ######################################################################
 
 ## Pictures from me
@@ -100,7 +104,6 @@ current.html: hiv.html ebola.html models.html import.html
 	$(cat)
 
 ######################################################################
-
 
 # Special image rules
 
@@ -126,12 +129,12 @@ files/recommendations.cover.png:
 
 ######################################################################
 
-
 ### Makestuff
 
 -include $(ms)/git.mk
+-include $(ms)/modules.mk
 -include $(ms)/visual.mk
-
 -include $(ms)/RR/pdf.mk
+
 # -include $(ms)/wrapR.mk
 # -include $(ms)/oldlatex.mk

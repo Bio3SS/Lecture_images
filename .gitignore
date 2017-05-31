@@ -18,9 +18,16 @@ commit.txt
 *.wrapR.*
 
 local.mk
+*.step.mk
+*.html
 
 testdir/
 .testdir/
 subclone_dir/
 
 *.makestuff
+
+allsteps.mk
+commit.time
+files
+target.mk
