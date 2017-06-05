@@ -12,6 +12,8 @@ target: $(target)
 
 Sources = Makefile .gitignore README.md sub.mk LICENSE.md todo.md
 
+Drop = ~/Dropbox
+
 include sub.mk
 -include $(ms)/perl.def
 
@@ -105,6 +107,13 @@ current.html: hiv.html ebola.html models.html import.html
 
 ######################################################################
 
+Makefile: files
+
+files: 
+	/bin/ln -fs $(Drop)/Lecture_images $@
+
+######################################################################
+
 # Special image rules
 
 files/linked.crop.jpg: files/linked.jpg Makefile
@@ -131,6 +140,7 @@ files/recommendations.cover.png:
 
 ### Makestuff
 
+-include allsteps.mk
 -include $(ms)/git.mk
 -include $(ms)/modules.mk
 -include $(ms)/visual.mk
