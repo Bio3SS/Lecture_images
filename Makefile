@@ -136,6 +136,10 @@ files/recommendations.cover.png:
 %.png: %.gif
 	convert $< $@
 
+Sources += missing.txt
+files/%: missing.txt.pdf
+	convert $< $@
+
 ######################################################################
 
 ### Makestuff
@@ -145,6 +149,8 @@ files/recommendations.cover.png:
 -include $(ms)/modules.mk
 -include $(ms)/visual.mk
 -include $(ms)/RR/pdf.mk
+
+-include $(ms)/forms.mk
 
 # -include $(ms)/wrapR.mk
 # -include $(ms)/oldlatex.mk
