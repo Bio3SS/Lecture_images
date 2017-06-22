@@ -12,7 +12,9 @@ target: $(target)
 
 Sources = Makefile .gitignore README.md sub.mk LICENSE.md todo.md
 
-Drop = ~/Dropbox
+## Change this in local.mk included from sub.mk (if desired)
+## Or just ignore it and you will get a local files directory if it does not exist
+Drop = ~/Dropbox/Lecture_images
 
 include sub.mk
 -include $(ms)/perl.def
@@ -110,7 +112,7 @@ current.html: hiv.html ebola.html models.html import.html
 Makefile: files
 
 files: 
-	(touch $Drop/Lecture_images/test && /bin/ln -fs $(Drop)/Lecture_images $@) || $(mkdir)
+	(touch $(Drop)/test && /bin/ln -fs $(Drop) $@) || $(mkdir)
 
 ######################################################################
 
