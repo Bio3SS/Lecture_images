@@ -110,7 +110,7 @@ current.html: hiv.html ebola.html models.html import.html
 Makefile: files
 
 files: 
-	/bin/ln -fs $(Drop)/Lecture_images $@
+	(touch $Drop/Lecture_images/test && /bin/ln -fs $(Drop)/Lecture_images $@) || $(mkdir)
 
 ######################################################################
 
