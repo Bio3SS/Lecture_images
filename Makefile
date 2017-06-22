@@ -12,12 +12,15 @@ target: $(target)
 
 Sources = Makefile .gitignore README.md sub.mk LICENSE.md todo.md
 
-## Change this in local.mk included from sub.mk (if desired)
-## Or just ignore it and you will get a local files directory if it does not exist
-Drop = ~/Dropbox/Lecture_images
+## To use a non-local directory, create Lecture_images in the desired place
+## Change Drop in local.mk (if desired)
+## To create a local Lecture_images directory, just ignore all this
+Drop = ~/Dropbox/
 
 include sub.mk
 -include $(ms)/perl.def
+
+imageDrop = $(Drop)/Lecture_images
 
 Sources += images.mk
 
@@ -112,7 +115,7 @@ current.html: hiv.html ebola.html models.html import.html
 Makefile: files
 
 files: 
-	(touch $(Drop)/test && /bin/ln -fs $(Drop) $@) || $(mkdir)
+	(touch $(imageDrop)/test && $(LN) $(imageDrop) $@) || $(mkdir)
 
 ######################################################################
 
@@ -136,10 +139,6 @@ files/recommendations.cover.png:
 	convert -density 300 $< $@
 
 %.png: %.gif
-	convert $< $@
-
-Sources += missing.txt
-files/%: missing.txt.pdf
 	convert $< $@
 
 ######################################################################
