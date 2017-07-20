@@ -34,6 +34,7 @@ countries.html: countries.step
 
 ####### Disease spread
 ## Disease organisms
+
 diseases.html: diseases.step
 
 ebola.html: ebola.step html.pl
@@ -44,6 +45,9 @@ health.html: health.step
 
 ## Human heterogeneity
 humans.html: humans.step
+
+## Generations
+generations.html: generations.step
 
 ###### What the hell is this category? Maybe stuff that was here before I started organizing?
 import.html: import.step
