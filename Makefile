@@ -12,10 +12,15 @@ target: $(target)
 
 Sources = Makefile .gitignore README.md sub.mk LICENSE.md todo.md
 
-Drop = ~/Dropbox
+## To use a non-local directory, create Lecture_images in the desired place
+## Change Drop in local.mk (if desired)
+## To create a local Lecture_images directory, just ignore all this
+Drop = ~/Dropbox/
 
 include sub.mk
 -include $(ms)/perl.def
+
+imageDrop = $(Drop)/Lecture_images
 
 Sources += images.mk
 
@@ -29,6 +34,7 @@ countries.html: countries.step
 
 ####### Disease spread
 ## Disease organisms
+
 diseases.html: diseases.step
 
 ebola.html: ebola.step html.pl
@@ -39,6 +45,9 @@ health.html: health.step
 
 ## Human heterogeneity
 humans.html: humans.step
+
+## Generations
+generations.html: generations.step
 
 ###### What the hell is this category? Maybe stuff that was here before I started organizing?
 import.html: import.step
@@ -110,7 +119,7 @@ current.html: hiv.html ebola.html models.html import.html
 Makefile: files
 
 files: 
-	/bin/ln -fs $(Drop)/Lecture_images $@
+	(touch $(imageDrop)/test && $(LN) $(imageDrop) $@) || $(mkdir)
 
 ######################################################################
 
@@ -145,6 +154,8 @@ files/recommendations.cover.png:
 -include $(ms)/modules.mk
 -include $(ms)/visual.mk
 -include $(ms)/RR/pdf.mk
+
+-include $(ms)/forms.mk
 
 # -include $(ms)/wrapR.mk
 # -include $(ms)/oldlatex.mk
