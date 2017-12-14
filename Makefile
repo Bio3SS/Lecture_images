@@ -14,8 +14,11 @@ Sources = Makefile .gitignore README.md sub.mk LICENSE.md todo.md
 
 ## To use a non-local directory, create Lecture_images in the desired place
 ## Change Drop in local.mk (if desired)
-## To create a local Lecture_images directory, just ignore all this
+
 Drop = ~/Dropbox/
+Sources += jd.local
+jd:
+	$(CP) jd.local local.mk
 
 include sub.mk
 -include $(ms)/perl.def
@@ -74,6 +77,8 @@ dynamics.html: dynamics.step
 aging.html: aging.step
 evaluation.html: evaluation.step
 rabies.html: rabies.step
+
+math.html: math.step
 
 ########################################################################
 
