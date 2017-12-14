@@ -15,7 +15,6 @@ Sources = Makefile .gitignore README.md sub.mk LICENSE.md todo.md
 ## To use a non-local directory, create Lecture_images in the desired place
 ## Change Drop in local.mk (if desired)
 
-Drop = ~/Dropbox/
 Sources += jd.local
 jd:
 	$(CP) jd.local local.mk
