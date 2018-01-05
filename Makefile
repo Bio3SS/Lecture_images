@@ -157,7 +157,7 @@ files/recommendations.cover.png:
 -include $(ms)/git.mk
 -include $(ms)/modules.mk
 -include $(ms)/visual.mk
--include $(ms)/RR/pdf.mk
+-include $(ms)/wrapR/pdf.mk
 
 -include $(ms)/forms.mk
 
