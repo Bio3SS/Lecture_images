@@ -10,7 +10,8 @@ target: $(target)
 # make files
 ## and so on
 
-Sources = Makefile .gitignore README.md sub.mk LICENSE.md todo.md
+Sources = Makefile .ignore README.md sub.mk LICENSE.md todo.md
+Ignore += .gitignore
 
 ## To use a non-local directory, create Lecture_images in the desired place
 ## Change Drop in local.mk (if desired)
