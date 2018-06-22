@@ -91,6 +91,7 @@ steps = $(wildcard *.step)
 Sources += $(steps)
 Sources += $(wildcard *.pl)
 
+Ignore += *.step.mk
 %.step.mk: %.step mk.pl
 	$(PUSH)
 
@@ -100,6 +101,7 @@ Sources += $(wildcard *.pl)
 	$(PUSHSTAR)
 
 stepmks = $(steps:.step=.step.mk)
+Ignore += allsteps.mk
 allsteps.mk: $(stepmks)
 	$(cat)
 
