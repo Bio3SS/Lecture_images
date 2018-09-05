@@ -1,4 +1,5 @@
 # Lecture_images
+# Deprecated; keeps pinging all.time
 
 current: target
 target = Makefile
